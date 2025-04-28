@@ -3,6 +3,7 @@ package kz.baymukach.intensivandroid
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,11 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         val users = listOf(
             User("Bekzat", 19),
-            User("Bekzat", 19)
+            User("Ali", 19)
         )
 
         recyclerView.layoutManager = LinearLayoutManager(this);
-        recyclerView.adapter = UserAdapter(users);
+        recyclerView.adapter = UserAdapter(users){ clickedUser ->
+            Toast.makeText(this, clickedUser.name, Toast.LENGTH_SHORT).show();
+        }
     }
 
 
