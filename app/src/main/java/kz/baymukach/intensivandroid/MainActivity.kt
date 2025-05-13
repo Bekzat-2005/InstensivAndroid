@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
 
 
 //    lifeSicle
-    override fun onStart() {
-        super.onStart()
-        println("onStart вызван")
-        Log.d("LIFECYCLE", "onStart")
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        println("onStart вызван")
+//        Log.d("LIFECYCLE", "onStart")
+//    }
 //
 //    override fun onResume() {
 //        super.onResume()
