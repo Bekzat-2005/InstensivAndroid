@@ -1,8 +1,10 @@
 package kz.baymukach.intensivandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +18,11 @@ class MainActivity : AppCompatActivity() {
 //        Log.d("LIFECYCLE", "OnCreate")
 //
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView);
+        val btn1 = findViewById<Button>(R.id.btn1)
+
+        btn1.setOnClickListener{
+            startActivity(Intent(applicationContext, RegisterActivity::class.java))
+        }
 
         val users = listOf(
             User("Bekzat", 19),
@@ -27,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, clickedUser.name, Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
 
